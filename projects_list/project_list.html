@@ -1,0 +1,23 @@
+<div class="image-section collection" ng-controller="ProjectsListCtrl">
+    <h1 class="collection-title">{{title}}</h1>
+    <div class="col-sm-6">
+        <div class="image-row" ng-repeat="project in column1">
+            <a class="hovereffect" href="#type/{{id}}/gallery/{{project.counter}}">
+                <img class="img-responsive" ng-src="{{project.tilePath}}" alt="">
+                <div class="overlay white-overlay">
+                    <h4 class="title">{{project.name}}</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="image-row" ng-repeat="project in column2">
+            <a class="hovereffect" href="#type/{{id}}/gallery/{{project.counter}}">
+                <img class="img-responsive" ng-src="{{project.tilePath}}" alt="">
+                <div class="overlay white-overlay">
+                    <h4 class="title">{{project.name}}</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

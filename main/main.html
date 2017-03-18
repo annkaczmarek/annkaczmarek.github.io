@@ -1,0 +1,107 @@
+<div ng-controller="MainController">
+    <header>
+        <nav class="navbar transparent navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"> <span>ANNA <strong>DYDAK</strong></span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a ng-click="gotoAnchor('about')"><span>O MNIE</span></a></li>
+                        <li><a ng-click="gotoAnchor('references')"><span>REFERENCJE</span></a></li>
+                        <li><a ng-click="gotoAnchor('certificates')"><span>CERTYFIKATY</span></a></li>
+                        <li><a ng-click="gotoAnchor('contact')"><span>KONTAKT</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="header" id="portfolio">
+        <h1 class="section-title">PORTFOLIO</h1>
+        <div class="collection flex">
+            <div ng-repeat="type in types" class="inline tile">
+                <a class="hovereffect" href="#/type{{type.urlPart}}/{{$index}}">
+                    <i class="{{type.class_id}}"></i>
+                    <div class="overlay">
+                        <div class="blur"></div>
+                        <h5 class="title">{{type.name}}</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="band"></div>
+    <section class="collection page-section sliding-anim sliding">
+        <section class="page-section collection text-section" id="about">
+            <h2 class="section-title">O MNIE</h2>
+            <div>
+                <div class="text col-sm-6">
+                    <p class="centered">
+                        Jestem spokojną, ambitną i punktualną studentką czwartego roku z tytułem inżyniera architekta.
+                        Pomimo iż to początek mojej ścieżki zawodowej, mogę zapewnić, że moją mocną stroną jest sumienność,
+                        precyzja i zorganizowanie. Lubię pracować w zespole.
+                    </p>
+                </div>
+                <img class="portrait" src="images/foto/JA2.jpg">
+            </div>
+            <div class="text col-sm-12">
+                <h3>UMIEJĘTNOŚCI</h3>
+                <ul>
+                    <li>Bardzo dobra znajomość obsługi programów: Autocad, SketchUp + V-ray, Photoshop, ArchiCad, Art-lantis,</li>
+                    <li>Dobra znajomość obsługi programów: Revit, 3ds max</li>
+                    <li>Umiejętność obsługi programów Word, Excel, Power Point</li>
+                    <li>Zdolności artystyczne - rysunek</li>
+                    <li>Prawo jazdy kategorii B</li>
+                </ul>
+
+                <h3>WYKSZTAŁCENIE</h3>
+                <ul>
+                    <li>1.09.2010 - 26.04.2013:  Liceum ogólnokształcące nr 2 im. K. K. Baczyńskiego w Koninie Profil
+                        matematyczno-językowy</li>
+                    <li>1.10.2013 - dzisiaj:  Politechnika Poznańska Wydział Architektury, kierunek Architektura</li>
+                    <li>06.02.2017 - tytuł inż. arch.</li>
+                </ul>
+                <h3>OSIĄGNIĘCIA</h3>
+                <ul>
+                    <li>6.07.2014 - 19.09.2014:  Praca wakacyjna w "Bar at Bewley’s Hotel Manchester Airport"</li>
+                    <li>01.10.2014 - dzisiaj:  Aktywna działalność w "KNSA - Kole Naukowym Studentów Architektury
+                        Politechniki Poznańskiej", m.in. organizowanie wycieczek na budowy dla studentów</li>
+                    <li>16.11.2014   18 godzin:   Kurs zaawansowany z programu Autocad w firmie BUDiKOM w Poznaniu</li>
+                    <li>17.08.2015 - 11.09.2015:  Praktyka w "R PILCH PRACOWNIA PROJEKTOWA Roman Pilch" w Koninie
+                        <a href="http://projektowaniepilch.pl/index.php/pl/">http://projektowaniepilch.pl/index.php/pl/</a></li>
+                    <li>01.10.2015 - 31.01.2016:  Stypendium Rektora dla najlepszych studentów</li>
+                    <li>01.02.2016 - 30.06.2016:  Drugie stypendium Rektora dla najlepszych studentów</li>
+                    <li>01.08.2016 - 26.09.2016: Praktyka w "ULTRA-ARCHITECS" w Poznaniu
+                        <a href="http://ultra-architects.pl/aktualnosci/">http://ultra-architects.pl/aktualnosci/</a></li>
+                    <li>12.09.2016 - 15.09.2016:  Pomoc od strony graficznej w projekcie studenckim Politechniki Poznańskiej:
+                        "Zawody samochodów solarnych World Solar Challenge w Australii"</li>
+                </ul>
+            </div>
+        </section>
+        <section class="page-section collection image-section" id="references">
+            <h2 class="section-title">REFERENCJE</h2>
+            <div>
+                <img ng-repeat="reference in references" class="col-sm-6 img-responsive maximize"
+                     ng-src="{{reference.path}}" alt="">
+            </div>
+        </section>
+        <section class="page-section collection image-section" id="certificates">
+            <h2 class="section-title">CERTYFIKATY</h2>
+            <div>
+                <img ng-repeat="certifate in certifates" class="col-sm-6 img-responsive maximize"
+                     ng-src="{{certifate.path}}" alt="">
+            </div>
+        </section>
+        <section class="page-section collection text-section" id="contact">
+            <h2 class="section-title">KONTAKT</h2>
+            <p class="centered">
+                email: <strong>annaxdydak@gmail.com</strong>
+            </p>
+        </section>
+    </section>
+</div>
