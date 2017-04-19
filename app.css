@@ -137,7 +137,7 @@ i.fa:hover{
 }
 
 .hovereffect .overlay .blur{
-  background-color:rgba(255,255,255,0.9);
+  background-color:rgba(255,255,255,0.5);
   position:absolute;
   top:0;
   left:0;
@@ -145,6 +145,11 @@ i.fa:hover{
   bottom:0;
   filter: blur(40px);
   border-radius: 5px;
+}
+
+
+.hovereffect:hover .overlay .blur {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .hovereffect .title {
@@ -158,18 +163,18 @@ i.fa:hover{
   margin-top: 20%;
 }
 
-.hovereffect:hover img {
+.hovereffect img {
   -ms-transform:scale(1.05);
   -webkit-transform:scale(1.05);
   transform:scale(1.05);
 }
 
-.hovereffect:hover .overlay {
+.hovereffect .overlay {
   opacity:1;
   filter:alpha(opacity=100);
 }
 
-.hovereffect:hover .title {
+.hovereffect .title {
   opacity: 1;
   filter: alpha(opacity=100);
   -ms-transform: translatey(0);
