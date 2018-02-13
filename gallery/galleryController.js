@@ -18,7 +18,7 @@ app.controller('GalleryCtrl', ['$scope', '$routeParams', function ($scope, $rout
                 {dir:"03. URBANISTYKA"},
                 {dir:"04. MAKIETY"},
                 {dir:"05. RYSUNKI"},
-                {dir:"06. RZEŹBA_RZEZBA"},
+                {dir:"06. RZEŹBA"},
                 {dir:"07. WIZUALIZACJE"}]
         };
 
