@@ -270,3 +270,26 @@ a{
 .centered{
   text-align: center;
 }
+
+.justified{
+  text-align: justify;
+}
+
+.no-dotes{
+  list-style-type: none;
+  padding: 0;
+}
+
+.row td{
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+h3{
+  padding-top: 20px;
+}
+
+.center-align{
+  width: 50%;
+  margin: auto;
+}
