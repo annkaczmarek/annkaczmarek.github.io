@@ -2,28 +2,36 @@ app.controller("ProjectsListCtrl", ['$scope', '$routeParams', function ($scope, 
     var id = $routeParams.id;
     var architPath = 'images/PORTFOLIO/PL/01. ARCHITEKTURA/';
     var smallArchitPath = 'images/PORTFOLIO/PL/02. MAŁA ARCHITEKTURA/';
+    var urbanPath = 'images/PORTFOLIO/PL/03. URBANISTYKA/';
+    var scultpurePath = 'images/PORTFOLIO/PL/06. RZEZBA/';
     var tilePath = 'tile/tile.jpg';
     var types = [
         {
             title: "ARCHITEKTURA",
-            projects: [{name: 'PRACA INŻYNIERSKA - CEGIELNIA',
-                    tilePath: architPath + '01. PRACA INŻYNIERSKA - CEGIELNIA/' + tilePath
+            projects: [
+                {
+                    name: 'PIEKARNIA',
+                    tilePath: architPath + 'PIEKARNIA/' + tilePath
+                },
+                {
+                    name: 'ELDERLY CARE CENTER',
+                    tilePath: architPath + 'ELDERLY CARE CENTER/' + tilePath
                 },
                 {
                     name: 'CAFE-FRAME',
-                    tilePath: architPath + '04. CAFE-FRAME/' + tilePath
+                    tilePath: architPath + 'CAFE-FRAME/' + tilePath
                 },
                 {
                     name: 'ZESPÓŁ BUDYNKÓW WIELORODZINNYCH - RIVER&TERRACE',
-                    tilePath: architPath + '05. ZESPÓŁ BUDYNKÓW WIELORODZINNYCH - RIVER&TERRACE/' + tilePath
+                    tilePath: architPath + 'ZESPÓŁ BUDYNKÓW WIELORODZINNYCH - RIVER&TERRACE/' + tilePath
                 },
                 {
                     name: 'PRACOWNIA BIURA GRAFICZNEGO',
-                    tilePath: architPath + '02. PRACOWNIA BIURA GRAFICZNEGO/' + tilePath
+                    tilePath: architPath + 'PRACOWNIA BIURA GRAFICZNEGO/' + tilePath
                 },
                 {
                     name: 'SKATEPARK',
-                    tilePath: architPath + '03. SKATEPARK/' + tilePath
+                    tilePath: architPath + 'SKATEPARK/' + tilePath
                 }]
         },
         {
@@ -36,6 +44,41 @@ app.controller("ProjectsListCtrl", ['$scope', '$routeParams', function ($scope, 
                 {
                     name: 'FORMA WYSTAWIENNICZA',
                     tilePath: smallArchitPath + 'FORMA WYSTAWIENNICZA/' + tilePath
+                },
+                {
+                    name: 'WEDDING',
+                    tilePath: smallArchitPath + 'WEDDING/' + tilePath
+                }]
+        },
+        {
+            title: "URBANISTYKA",
+            projects:[
+                {
+                    name: 'PRACA INŻYNIERSKA - CEGIELNIA',
+                    tilePath: urbanPath + 'PRACA INŻYNIERSKA - CEGIELNIA/' + tilePath
+                },
+                {
+                    name: 'TUREK',
+                    tilePath: urbanPath + 'TUREK/' + tilePath
+                },
+                {
+                    name: 'POZOSTAŁE',
+                    tilePath: urbanPath + "POZOSTAŁE/" + tilePath
+                }
+            ]
+        },
+        {},
+        {},
+        {
+            title: "RZEŹBA",
+            projects:[
+                {
+                    name: 'KOLEKCJA KSIĄŻEK',
+                    tilePath: scultpurePath + 'KOLEKCJA KSIĄŻEK/' + tilePath
+                },
+                {
+                    name: 'POZOSTAŁE',
+                    tilePath: scultpurePath + 'POZOSTAŁE/' + tilePath
                 }]
         }
     ];
