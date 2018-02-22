@@ -9,8 +9,12 @@ app.controller('MainController', ['$anchorScroll', '$location', '$scope', functi
         {class_id: 'fa fa-desktop fa-4x', name: 'WIZUALIZACJE', urlPart: '/gallery'}
     ];
     $scope.references = [
-        {path: "images/REFERENCJE/R PILCH.jpg"},
-        {path: "images/REFERENCJE/ULTRA ARCHITECTS.jpg"}
+        [
+            {path: "images/REFERENCJE/R PILCH.jpg"},
+            {path: "images/REFERENCJE/ULTRA ARCHITECTS.jpg"}],
+        [
+            {path: "images/REFERENCJE/ULTRA_ARCHITECTS_2017.jpg"}
+        ]
     ];
     $scope.certifates = [
         {path: "images/CERTIFIKATY/3ds max.jpg"},
