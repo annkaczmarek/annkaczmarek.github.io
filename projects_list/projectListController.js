@@ -1,53 +1,49 @@
 app.controller("ProjectsListCtrl", ['$scope', '$routeParams', function ($scope, $routeParams) {
     var id = $routeParams.id;
-    var architPath = 'images/PORTFOLIO/PL/01. ARCHITEKTURA/';
-    var smallArchitPath = 'images/PORTFOLIO/PL/02. MAŁA ARCHITEKTURA/';
+    var archiPath = 'images/PORTFOLIO/PL/01. ARCHITEKTURA/';
+    var pavilionPath = 'images/PORTFOLIO/PL/02. PAWILONY/';
     var urbanPath = 'images/PORTFOLIO/PL/03. URBANISTYKA/';
-    var scultpurePath = 'images/PORTFOLIO/PL/06. RZEZBA/';
+    var otherPath = 'images/PORTFOLIO/PL/06. INNE/';
     var tilePath = 'tile/tile.jpg';
     var types = [
         {
             title: "ARCHITEKTURA",
             projects: [
                 {
-                    name: 'PIEKARNIA',
-                    tilePath: architPath + 'PIEKARNIA/' + tilePath
-                },
-                {
                     name: 'ELDERLY CARE CENTER',
-                    tilePath: architPath + 'ELDERLY CARE CENTER/' + tilePath
-                },
-                {
-                    name: 'CAFE-FRAME',
-                    tilePath: architPath + 'CAFE-FRAME/' + tilePath
+                    tilePath: archiPath + 'ELDERLY CARE CENTER/' + tilePath
                 },
                 {
                     name: 'ZESPÓŁ BUDYNKÓW WIELORODZINNYCH - RIVER&TERRACE',
-                    tilePath: architPath + 'ZESPÓŁ BUDYNKÓW WIELORODZINNYCH - RIVER&TERRACE/' + tilePath
+                    tilePath: archiPath + 'ZESPÓŁ BUDYNKÓW WIELORODZINNYCH - RIVER&TERRACE/' + tilePath
                 },
                 {
-                    name: 'PRACOWNIA BIURA GRAFICZNEGO',
-                    tilePath: architPath + 'PRACOWNIA BIURA GRAFICZNEGO/' + tilePath
+                    name: 'CAFE-FRAME',
+                    tilePath: archiPath + 'CAFE-FRAME/' + tilePath
+                },
+                {
+                    name: 'PIEKARNIA',
+                    tilePath: archiPath + 'PIEKARNIA/' + tilePath
                 },
                 {
                     name: 'SKATEPARK',
-                    tilePath: architPath + 'SKATEPARK/' + tilePath
+                    tilePath: archiPath + 'SKATEPARK/' + tilePath
+                },
+                {
+                    name: 'PRACOWNIA BIURA GRAFICZNEGO',
+                    tilePath: archiPath + 'PRACOWNIA BIURA GRAFICZNEGO/' + tilePath
                 }]
         },
         {
-            title: "MAŁA ARCHITEKTURA",
+            title: "PAWILONY",
             projects:[
                 {
-                    name: 'PROJEKT REWITALIZACJI PRZESTRZENI MIEJSKIEJ',
-                    tilePath: smallArchitPath + 'PROJEKT REWITALIZACJI PRZESTRZENI MIEJSKIEJ/' + tilePath
-                },
-                {
                     name: 'FORMA WYSTAWIENNICZA',
-                    tilePath: smallArchitPath + 'FORMA WYSTAWIENNICZA/' + tilePath
+                    tilePath: pavilionPath + 'FORMA WYSTAWIENNICZA/' + tilePath
                 },
                 {
                     name: 'WEDDING',
-                    tilePath: smallArchitPath + 'WEDDING/' + tilePath
+                    tilePath: pavilionPath + 'WEDDING/' + tilePath
                 }]
         },
         {
@@ -58,27 +54,39 @@ app.controller("ProjectsListCtrl", ['$scope', '$routeParams', function ($scope, 
                     tilePath: urbanPath + 'PRACA INŻYNIERSKA - CEGIELNIA/' + tilePath
                 },
                 {
-                    name: 'TUREK',
-                    tilePath: urbanPath + 'TUREK/' + tilePath
+                    name: 'PROJEKT ZAGOSPODAROWANIA PRZESTRZENNEGO W SKIERNIEWICACH',
+                    tilePath: urbanPath + "PROJEKT ZAGOSPODAROWANIA PRZESTRZENNEGO W SKIERNIEWICACH/" + tilePath
                 },
                 {
-                    name: 'POZOSTAŁE',
-                    tilePath: urbanPath + "POZOSTAŁE/" + tilePath
+                    name: 'DEPTAK - OSIEDLE GÓRNICZE W TURKU',
+                    tilePath: urbanPath + 'DEPTAK - OSIEDLE GÓRNICZE W TURKU/' + tilePath
+                },
+                {
+                    name: 'PROJEKT REWITALIZACJI PRZESTRZENI MIEJSKIEJ',
+                    tilePath: urbanPath + 'PROJEKT REWITALIZACJI PRZESTRZENI MIEJSKIEJ/' + tilePath
                 }
             ]
         },
         {},
         {},
         {
-            title: "RZEŹBA",
+            title: "INNE",
             projects:[
                 {
                     name: 'KOLEKCJA KSIĄŻEK',
-                    tilePath: scultpurePath + 'KOLEKCJA KSIĄŻEK/' + tilePath
+                    tilePath: otherPath + 'KOLEKCJA KSIĄŻEK/' + tilePath
                 },
                 {
-                    name: 'POZOSTAŁE',
-                    tilePath: scultpurePath + 'POZOSTAŁE/' + tilePath
+                    name: 'THE COLOUR ROLLER',
+                    tilePath: otherPath + 'THE COLOUR ROLLER/' + tilePath
+                },
+                {
+                    name: 'RZEŹBA Z GLINY',
+                    tilePath: otherPath + 'RZEŹBA Z GLINY/' + tilePath
+                },
+                {
+                    name: '"GOOD BOY"',
+                    tilePath: otherPath + '"GOOD BOY"/' + tilePath
                 }]
         }
     ];

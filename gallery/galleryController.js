@@ -8,47 +8,49 @@ app.controller('GalleryCtrl', ['$scope', '$routeParams', function ($scope, $rout
             dirs: [
                 {
                     dir:"01. ARCHITEKTURA",
-                    subdirs:["PIEKARNIA", "ELDERLY CARE CENTER", "CAFE-FRAME", "ZESPÓŁ BUDYNKÓW WIELORODZINNYCH - RIVER&TERRACE",
-                        "PRACOWNIA BIURA GRAFICZNEGO", "SKATEPARK"]
+                    subdirs:["ELDERLY CARE CENTER", "ZESPÓŁ BUDYNKÓW WIELORODZINNYCH - RIVER&TERRACE", "CAFE-FRAME", "PIEKARNIA",
+                         "SKATEPARK", "PRACOWNIA BIURA GRAFICZNEGO"]
                 },
                 {
-                    dir:"02. MAŁA ARCHITEKTURA",
-                    subdirs:["PROJEKT REWITALIZACJI PRZESTRZENI MIEJSKIEJ", "FORMA WYSTAWIENNICZA", "WEDDING"]
+                    dir:"02. PAWILONY",
+                    subdirs:["FORMA WYSTAWIENNICZA", "WEDDING"]
                 },
                 {
                     dir:"03. URBANISTYKA",
-                    subdirs:["PRACA INŻYNIERSKA - CEGIELNIA", "TUREK", "POZOSTAŁE"]
+                    subdirs:["PRACA INŻYNIERSKA - CEGIELNIA", "PROJEKT ZAGOSPODAROWANIA PRZESTRZENNEGO W SKIERNIEWICACH",
+                        "DEPTAK - OSIEDLE GÓRNICZE W TURKU", "PROJEKT REWITALIZACJI PRZESTRZENI MIEJSKIEJ"]
                 },
                 {dir:"04. MAKIETY"},
                 {dir:"05. RYSUNKI"},
                 {
-                    dir:"06. RZEZBA",
-                    subdirs:["KOLEKCJA KSIĄŻEK", "POZOSTAŁE"]
+                    dir:"06. INNE",
+                    subdirs:["KOLEKCJA KSIĄŻEK", "THE COLOUR ROLLER", "RZEŹBA Z GLINY", "\"GOOD BOY\""]
                 },
                 {dir:"07. WIZUALIZACJE"}]
         };
 
     var images = [
         [[
-            {name: '01', title: 'wizualizacja'},
-            {name: '02', title: 'widok na kompleks'},
-            {name: '03', title: 'wnętrze kantyny'},
-            {name: '04', title: 'projekt zagospodarowania terenu'},
-            {name: '05', title: 'rzuty'},
-            {name: '06', title: 'przekroje i elewacje'}
-        ], [
             {name: '01', title: ''},
             {name: '02', title: ''},
+            {name: '06', title: ''},
             {name: '03', title: ''},
             {name: '04', title: ''},
             {name: '05', title: ''},
-            {name: '06', title: ''},
             {name: '07', title: ''},
             {name: '08', title: ''},
             {name: '09', title: ''},
             {name: '10', title: ''},
             {name: '11', title: ''},
             {name: '12', title: ''}
+        ], [
+            {name: '03', title: '1. makieta'},
+            {name: '01', title: 'plansza'},
+            {name: '02', title: 'projekt zagospodarowania terenu'},
+            {name: '04', title: 'aksonometrie'},
+            {name: '05', title: 'rzuty i przekroje'},
+            {name: '06', title: 'aksonometrie mieszkań'},
+            {name: '07', title: 'elewacje'}
         ], [
             {name: '01', title: 'plansza'},
             {name: '02', title: 'makieta'},
@@ -58,14 +60,21 @@ app.controller('GalleryCtrl', ['$scope', '$routeParams', function ($scope, $rout
             {name: '06', title: 'przekrój'},
             {name: '07', title: 'elewacje'}
         ], [
-            {name: '01', title: 'plansza'},
-            {name: '02', title: 'projekt zagospodarowania terenu'},
-            {name: '03', title: '1. makieta'},
-            {name: '04', title: 'aksonometrie'},
-            {name: '05', title: 'rzuty i przekroje'},
-            {name: '06', title: 'aksonometrie mieszkań'},
-            {name: '07', title: 'elewacje'},
-            {name: '08', title: 'wizualizacje'}
+            {name: '01', title: 'wizualizacja'},
+            {name: '02', title: 'widok na kompleks'},
+            {name: '03', title: 'wnętrze kantyny'},
+            {name: '04', title: 'projekt zagospodarowania terenu'},
+            {name: '05', title: 'rzuty'},
+            {name: '06', title: 'przekroje i elewacje'}
+        ], [
+            {name: '01', title: 'plansze'},
+            {name: '02', title: 'wizualizacja'},
+            {name: '03', title: 'wizualizacja'},
+            {name: '04', title: 'wizualizacja'},
+            {name: '05', title: 'projekt zagospodarowania terenu'},
+            {name: '06', title: 'rzuty'},
+            {name: '07', title: 'przekroje i detale'},
+            {name: '08', title: 'elewacje'}
         ], [
             {name: '01', title: 'wizualizacja'},
             {name: '02', title: 'wizualizacja'},
@@ -80,22 +89,8 @@ app.controller('GalleryCtrl', ['$scope', '$routeParams', function ($scope, $rout
             {name: '11', title: 'przekroje B-B'},
             {name: '12', title: 'elewacje zewnętrzne'},
             {name: '13', title: 'elewacje wewnętrzne'}
-        ], [
-            {name: '01', title: 'plansze'},
-            {name: '02', title: 'wizualizacja'},
-            {name: '03', title: 'wizualizacja'},
-            {name: '04', title: 'wizualizacja'},
-            {name: '05', title: 'projekt zagospodarowania terenu'},
-            {name: '06', title: 'rzuty'},
-            {name: '07', title: 'przekroje i detale'},
-            {name: '08', title: 'elewacje'}
         ]],
         [[
-            {name: '01', title: 'plansza'},
-            {name: '02', title: 'projekt zagospodarowania terenu'},
-            {name: '03', title: ''},
-            {name: '04', title: 'mała architektura'}
-        ], [
             {name: '01', title: 'plansza'},
             {name: '02', title: 'wizualizacja'},
             {name: '03', title: 'wizualizacja'},
@@ -129,6 +124,8 @@ app.controller('GalleryCtrl', ['$scope', '$routeParams', function ($scope, $rout
             {name: '16', title: 'rzut techniczny'},
             {name: '17', title: 'przekrój techniczny'}
         ],[
+            {name: '01', title: 'projekt zagospodarowania terenu w miejscowości Skierniewice'}
+        ],[
             {name: '01', title: 'plansze'},
             {name: '02', title: 'rzut'},
             {name: '03', title: 'aksonometrie'},
@@ -139,9 +136,10 @@ app.controller('GalleryCtrl', ['$scope', '$routeParams', function ($scope, $rout
             {name: '08', title: 'widok na obiekt usługowy i targowiska'},
             {name: '09', title: 'wnętrze targowiska'}
         ],[
-            {name: '01', title: 'projekt zagospodarowania terenu w miejscowości Skierniewice'},
-            {name: '02', title: 'projekt rewitalizacji przestrzeni miejskiej w Poznaniu'},
-            {name: '03', title: 'projekt osiedla Lusowo'}
+            {name: '01', title: 'plansza'},
+            {name: '02', title: 'projekt zagospodarowania terenu'},
+            {name: '03', title: ''},
+            {name: '04', title: 'mała architektura'}
         ]],
         [[
             {name: '01', title: ''},
@@ -174,12 +172,20 @@ app.controller('GalleryCtrl', ['$scope', '$routeParams', function ($scope, $rout
             {name: '10', title: ''},
             {name: '11', title: ''},
             {name: '12', title: ''}
-
         ],[
-            {name: '01', title: 'forma przemysłowa inspirowana kodem kulturowym'},
-            {name: '02', title: 'interaktywny obiekton dla niewidomych'}
+            {name: '02', title: ''}
+        ],[
+            {name: '04', title: ''}
+        ],[
+            {name: '03', title: ''}
         ]],
         [[
+            {name: '0001', title: ''},
+            {name: '0002', title: ''},
+            {name: '0003', title: ''},
+            {name: '001', title: ''},
+            {name: '002', title: ''},
+            {name: '003', title: ''},
             {name: '01', title: ''},
             {name: '02', title: ''},
             {name: '03', title: ''},
@@ -187,8 +193,7 @@ app.controller('GalleryCtrl', ['$scope', '$routeParams', function ($scope, $rout
             {name: '05', title: ''},
             {name: '06', title: ''},
             {name: '07', title: ''},
-            {name: '08', title: ''},
-            {name: '09', title: ''}
+            {name: '08', title: ''}
         ]]
     ];
 
