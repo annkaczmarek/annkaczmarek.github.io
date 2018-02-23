@@ -160,18 +160,10 @@ app.controller('GalleryCtrl', ['$scope', '$routeParams', function ($scope, $rout
             {name: '07', title: ''}
         ]],
         [[
-            {name: '01', title: ''},
-            {name: '02', title: ''},
-            {name: '03', title: ''},
-            {name: '04', title: ''},
-            {name: '05', title: ''},
-            {name: '06', title: ''},
-            {name: '07', title: ''},
-            {name: '08', title: ''},
-            {name: '09', title: ''},
-            {name: '10', title: ''},
-            {name: '11', title: ''},
-            {name: '12', title: ''}
+            {name: 'a', title: ''},
+            {name: 'a2', title: ''},
+            {name: 'a3', title: ''},
+            {name: 'a4', title: ''}
         ],[
             {name: '02', title: ''}
         ],[
