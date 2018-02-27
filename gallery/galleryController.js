@@ -1,33 +1,33 @@
 app.controller('GalleryCtrl', ['$scope', '$routeParams', function ($scope, $routeParams) {
-    var type_id = $routeParams.id;
-    var project_id = $routeParams.project_id;
+    var typeId = $routeParams.id;
+    var projectId = $routeParams.project_id;
 
     var paths =
-        {
-            relativePath: 'images/PORTFOLIO/PL/',
-            dirs: [
-                {
-                    dir:"01. ARCHITEKTURA",
-                    subdirs:["ELDERLY CARE CENTER", "ZESPÓŁ BUDYNKÓW WIELORODZINNYCH - RIVER&TERRACE", "CAFE-FRAME", "PIEKARNIA",
-                         "SKATEPARK", "PRACOWNIA BIURA GRAFICZNEGO"]
-                },
-                {
-                    dir:"02. PAWILONY",
-                    subdirs:["FORMA WYSTAWIENNICZA", "WEDDING"]
-                },
-                {
-                    dir:"03. URBANISTYKA",
-                    subdirs:["PRACA INŻYNIERSKA - CEGIELNIA", "PROJEKT ZAGOSPODAROWANIA PRZESTRZENNEGO W SKIERNIEWICACH",
-                        "DEPTAK - OSIEDLE GÓRNICZE W TURKU", "PROJEKT REWITALIZACJI PRZESTRZENI MIEJSKIEJ"]
-                },
-                {dir:"04. MAKIETY"},
-                {dir:"05. RYSUNKI"},
-                {
-                    dir:"06. INNE",
-                    subdirs:["KOLEKCJA KSIĄŻEK", "THE COLOUR ROLLER", "RZEŹBA Z GLINY", "\"GOOD BOY\""]
-                },
-                {dir:"07. WIZUALIZACJE"}]
-        };
+    {
+        relativePath: 'images/PORTFOLIO/PL/',
+        dirs: [
+            {
+                dir:"01. ARCHITEKTURA",
+                subdirs:["ELDERLY CARE CENTER", "ZESPÓŁ BUDYNKÓW WIELORODZINNYCH - RIVER&TERRACE", "CAFE-FRAME", "PIEKARNIA",
+                     "SKATEPARK", "PRACOWNIA BIURA GRAFICZNEGO"]
+            },
+            {
+                dir:"02. PAWILONY",
+                subdirs:["FORMA WYSTAWIENNICZA", "WEDDING"]
+            },
+            {
+                dir:"03. URBANISTYKA",
+                subdirs:["PRACA INŻYNIERSKA - CEGIELNIA", "PROJEKT ZAGOSPODAROWANIA PRZESTRZENNEGO W SKIERNIEWICACH",
+                    "DEPTAK - OSIEDLE GÓRNICZE W TURKU", "PROJEKT REWITALIZACJI PRZESTRZENI MIEJSKIEJ"]
+            },
+            {dir:"04. MAKIETY"},
+            {dir:"05. RYSUNKI"},
+            {
+                dir:"06. INNE",
+                subdirs:["KOLEKCJA KSIĄŻEK", "THE COLOUR ROLLER", "RZEŹBA Z GLINY", "\"GOOD BOY\""]
+            },
+            {dir:"07. WIZUALIZACJE"}]
+    };
 
     var images = [
         [[
@@ -209,15 +209,37 @@ app.controller('GalleryCtrl', ['$scope', '$routeParams', function ($scope, $rout
 
     var title;
 
-    if(project_id !== undefined)
+    if(projectId !== undefined)
     {
-        $scope.images = images[type_id][project_id];
-        title = paths.dirs[type_id].subdirs[project_id];
+        $scope.images = images[typeId][projectId];
+        title = paths.dirs[typeId].subdirs[projectId];
+        var projectName = "";
+        $scope.returnUrl = "#/type/" + typeId;
+
+        switch (parseInt(typeId))
+        {
+            case 0:
+                projectName = "architektura";
+                break;
+            case 1:
+                projectName = "pawilony";
+                break;
+            case 2:
+                projectName = "urbanistyka";
+                break;
+            case 5:
+                projectName = "inne";
+                break;
+        }
+
+        $scope.returnUrlTitle = projectName;
     }
     else
     {
-        $scope.images = images[type_id][0];
-        title = paths.dirs[type_id].dir;
+        $scope.images = images[typeId][0];
+        title = paths.dirs[typeId].dir;
+        $scope.returnUrl = "#/";
+        $scope.returnUrlTitle = "strona główna";
     }
 
     var array = title.split(".");
@@ -226,25 +248,31 @@ app.controller('GalleryCtrl', ['$scope', '$routeParams', function ($scope, $rout
     {
         $scope.title = array[1];
     }
-    else {
+    else
+    {
         $scope.title = title;
     }
 
-    $scope.currentImg = function (n) {
+    $scope.currentImg = function (n)
+    {
         currentImg(n);
     };
-    $scope.changeVisibility = function (n) {
-        if(n==1){
+    $scope.changeVisibility = function (n)
+    {
+        if(n === 1)
+        {
             var x = document.getElementsByClassName("slideshow");
             $(x[0]).fadeIn("slow");
         }
     };
-    $scope.changeOpacity = function (n) {
-        if(n==1){
+    $scope.changeOpacity = function (n)
+    {
+        if(n === 1)
+        {
             var dots = document.getElementsByClassName("miniature");
             dots[0].style.opacity = "1";
         }
-    }
+    };
 }]);
 
 var slideIndex = 1;

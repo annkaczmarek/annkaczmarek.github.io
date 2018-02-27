@@ -21,11 +21,14 @@ app.controller('MainController', ['$anchorScroll', '$location', '$scope', functi
         {path: "images/CERTIFIKATY/AutoCad.jpg"}
     ];
     $scope.diploma = { path: "images/DYPLOMY/DYPLOM TUREK.jpg" };
-    $scope.gotoAnchor = function(x) {
-        if ($location.hash() !== x){
+    $scope.goToAnchor = function(x)
+    {
+        if ($location.hash() !== x)
+        {
             $location.hash(x);
         }
-        else {
+        else
+        {
             $anchorScroll();
         }
     };

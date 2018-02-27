@@ -35,6 +35,7 @@ footer{
 
 .gallery{
   margin: 0 20px 60px !important;
+  width: 100%;
 }
 
 .gallery div:after{
@@ -81,13 +82,13 @@ footer{
   margin: 3.5em 0 3.5em;
 }
 
-i.fa{
+.project-tile{
   margin-top: 30%;
   padding: 5px;
   color: #434343;
   transition: color .3s ease-in; }
 
-i.fa:hover{
+.project-tile:hover{
   color: #e0a824;
 }
 
@@ -292,4 +293,12 @@ h3{
 .center-align{
   width: 50%;
   margin: auto;
+}
+
+.back-action{
+  margin: 15px;
+}
+
+#contact p{
+  font-size: medium;
 }

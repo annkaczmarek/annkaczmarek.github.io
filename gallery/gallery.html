@@ -1,14 +1,19 @@
-<div class="gallery collection" ng-controller="GalleryCtrl">
-    <h1 class="collection-title">{{title}}</h1>
-    <div class="slides">
-        <div ng-repeat="image in images" class="slide">
-            <img class="miniature" ng-src="{{image.path + '/' + image.name}}" ng-click="currentImg($index+1)"
-                 ng-init="changeOpacity($index+1)">
+<div ng-controller="GalleryCtrl">
+    <p class="back-action">
+        <a href="{{returnUrl}}"><i class="fa fa-arrow-left"></i> {{returnUrlTitle}}</a>
+    </p>
+    <div class="gallery collection">
+        <h1 class="collection-title">{{title}}</h1>
+        <div class="slides">
+            <div ng-repeat="image in images" class="slide">
+                <img class="miniature" ng-src="{{image.path + '/' + image.name}}" ng-click="currentImg($index+1)"
+                     ng-init="changeOpacity($index+1)">
+            </div>
         </div>
-    </div>
 
-    <div ng-repeat="image in images" class="slideshow" ng-init="changeVisibility($index+1)">
-        <img class="img-responsive" ng-src="{{image.path + '/' + image.name}}" alt="">
-        <h3>{{image.title}}</h3>
+        <div ng-repeat="image in images" class="slideshow" ng-init="changeVisibility($index+1)">
+            <img class="img-responsive" ng-src="{{image.path + '/' + image.name}}" alt="">
+            <h3>{{image.title}}</h3>
+        </div>
     </div>
 </div>
