@@ -1,10 +1,11 @@
 app.controller("ProjectsListCtrl", ['$scope', '$routeParams', function ($scope, $routeParams) {
-    var id = $routeParams.id;
-    var archiPath = 'images/PORTFOLIO/PL/01. ARCHITEKTURA/';
-    var pavilionPath = 'images/PORTFOLIO/PL/02. PAWILONY/';
-    var urbanPath = 'images/PORTFOLIO/PL/03. URBANISTYKA/';
-    var otherPath = 'images/PORTFOLIO/PL/06. INNE/';
-    var tilePath = 'tile/tile.jpg';
+    var id = $routeParams.id,
+        archiPath = 'images/PORTFOLIO/PL/01. ARCHITEKTURA/',
+        pavilionPath = 'images/PORTFOLIO/PL/02. PAWILONY/',
+        urbanPath = 'images/PORTFOLIO/PL/03. URBANISTYKA/',
+        otherPath = 'images/PORTFOLIO/PL/06. INNE/',
+        tilePath = 'tile/tile.jpg', elems, firstColCount;
+
     var types = [
         {
             title: "ARCHITEKTURA",
@@ -91,12 +92,14 @@ app.controller("ProjectsListCtrl", ['$scope', '$routeParams', function ($scope, 
         }
     ];
     $scope.id = id;
-    var elems = types[id].projects;
+    elems = types[id].projects;
 
-    for(var i = 0 ; i < elems.length ; i++){
+    for(var i = 0 ; i < elems.length ; i++)
+    {
         elems[i].counter = i;
     }
-    var firstColCount = Math.ceil(elems.length/2);
+
+    firstColCount = Math.ceil(elems.length/2);
     $scope.column1 = elems.slice(0, firstColCount);
     $scope.column2 = elems.slice(firstColCount);
     $scope.title = types[id].title;
