@@ -11,12 +11,16 @@ app.controller("ProjectsListCtrl", ['$scope', '$routeParams', function ($scope, 
             title: "ARCHITEKTURA",
             projects: [
                 {
+                    name: 'SZPITAL "HOTEL DLA CHORYCH"',
+                    tilePath: archiPath + 'hospital/' + tilePath
+                },
+                {
                     name: 'ELDERLY CARE CENTER',
                     tilePath: archiPath + 'ELDERLY CARE CENTER/' + tilePath
                 },
                 {
                     name: 'ZESPÓŁ BUDYNKÓW WIELORODZINNYCH - RIVER&TERRACE',
-                    tilePath: archiPath + 'ZESPÓŁ BUDYNKÓW WIELORODZINNYCH - RIVER&TERRACE/' + tilePath
+                    tilePath: archiPath + 'river-terrace/' + tilePath
                 },
                 {
                     name: 'CAFE-FRAME',
@@ -87,7 +91,7 @@ app.controller("ProjectsListCtrl", ['$scope', '$routeParams', function ($scope, 
                 },
                 {
                     name: '"GOOD BOY"',
-                    tilePath: otherPath + '"GOOD BOY"/' + tilePath
+                    tilePath: otherPath + 'GOOD BOY/' + tilePath
                 }]
         }
     ];
