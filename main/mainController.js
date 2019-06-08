@@ -10,10 +10,12 @@ app.controller('MainController', ['$anchorScroll', '$location', '$scope', functi
     ];
     $scope.references = [
         [
-            {path: "images/REFERENCJE/R PILCH.jpg"},
-            {path: "images/REFERENCJE/ULTRA ARCHITECTS.jpg"}],
-        [
+            {path: "images/REFERENCJE/WWA.png"},
             {path: "images/REFERENCJE/ULTRA_ARCHITECTS_2017.jpg"}
+        ],
+        [
+            {path: "images/REFERENCJE/ULTRA ARCHITECTS.jpg"},
+            {path: "images/REFERENCJE/R PILCH.jpg"}
         ]
     ];
     $scope.certifates = [

@@ -302,3 +302,12 @@ h3{
 #contact p{
   font-size: medium;
 }
+
+table tr .align-top{
+  vertical-align: top;
+}
+
+.caption{
+  margin-top: 1em;
+  text-align: justify;
+}
