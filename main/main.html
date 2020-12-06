@@ -13,7 +13,6 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a ng-click="goToAnchor('about')"><span>O MNIE</span></a></li>
-                        <li><a ng-click="goToAnchor('references')"><span>REFERENCJE</span></a></li>
                         <li><a ng-click="goToAnchor('certificates')"><span>CERTYFIKATY</span></a></li>
                         <li><a ng-click="goToAnchor('diploma')"><span>DYPLOM</span></a></li>
                         <li><a ng-click="goToAnchor('contact')"><span>KONTAKT</span></a></li>
@@ -298,18 +297,6 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-        </section>
-        <section class="page-section collection image-section" id="references">
-            <h2 class="section-title">REFERENCJE</h2>
-            <div ng-repeat="referenceGroup in references" class="row">
-                <div ng-if="referenceGroup.length == 1">
-                    <img class="center-align img-responsive maximize" ng-src="{{referenceGroup[0].path}}" alt="">
-                </div>
-                <div ng-if="referenceGroup.length > 1">
-                    <img ng-repeat="reference in referenceGroup" class="col-sm-6 center-align img-responsive maximize"
-                         ng-src="{{reference.path}}" alt="">
-                </div>
             </div>
         </section>
         <section class="page-section collection image-section" id="certificates">
